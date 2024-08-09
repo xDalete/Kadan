@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(
+    40deg,
+    #b1aad4 15%,
+    #9c8ee3 25%,
+    #101aa7 50%,
+    #000218 90%
+  );
+}
+nav {
+  background-color: #072150;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15pt;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.nav-logo {
+  height: 40%;
+}
+
+.nav-logo img {
+  height: 100%;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.nav-logo img:hover {
+  filter: grayscale(5%);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-link-item {
+  position: relative;
+}
+
+.nav-link-item a {
+  display: block;
+  padding: 15px;
+}
+
+.nav-link-item .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link-item .submenu a {
+  color: #000;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-link-item .submenu a:hover {
+  background-color: #ddd;
+}
+
+.nav-link-item:hover .submenu {
+  display: block;
+}
+
+.nav-user {
+  height: 80%;
+  margin-left: 20px; /* Adiciona um espaço entre os links de navegação e o ícone de usuário */
+}
+
+.nav-user img {
+  height: 100%;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.nav-user img:hover {
+  filter: grayscale(5%);
+}
+
+.user-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 250px;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  background-image: linear-gradient(
+    40deg,
+    #b1aad4 15%,
+    #9c8ee3 25%,
+    #101aa7 50%,
+    #000218 90%
+  );
+  height: 100vh;
+}
+
+.user-menu .user-buttons {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.user-menu .user-buttons:hover {
+  background-color: #f0f0f0;
+  color: #ffffff;
+}
+
+.user-menu.active {
+  display: flex;
+}
+
+.user-menu div {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.user-menu div:hover {
+  background-color: #aba7a7;
+}
+
+.user-menu .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-menu .user-info span {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.user-menu .user-info:hover {
+  background-color: #e0e0e0;
+}
+
+.user-info img {
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  filter: invert(1);
+}
+
+.user-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info span {
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.card-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+
+/* Global styles for user-menu and card-form */
+.user-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 250px;
+  background-color: #7d7c7c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.user-menu.active {
+  display: flex;
+}
+
+.user-menu div {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.user-menu div:hover {
+  background-color: #777777;
+}
+
+.user-menu .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+}
+
+.user-menu .user-info span {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Keeping existing card styles */
+.card {
+  min-width: 350px;
+  margin: 30px;
+  border: 1px #150e27 solid;
+  background: #1155a9;
+  padding: 3.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  background: #010556;
+  border: 1px #4d5079 solid;
+  border-radius: 10px;
+  inset: 0;
+  transform: rotate(-4deg);
+  z-index: -1;
+}
+
+.form-buttons {
+  background-color: #517ec1;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form-buttons:hover {
+  text-decoration: underline;
+  background-color: #0b2f66;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 10px;
+  color: #ffe3e39a;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.card-logo img {
+  width: 100px;
+  filter: invert(1);
+}
+
+.card-logo {
+  margin-bottom: 2rem;
+}
+
+.card-logo,
+.card-header,
+.card-footer {
+  text-align: center;
+}
+
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.card-header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.card-header h1 + div {
+  font-size: calc(1rem * 3);
+  opacity: 0.8;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  position: relative;
+  filter: invert(1);
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.form-item input,
+.form-item select {
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  width: 100%;
+  transition: background 0.5s;
+  font-size: 1rem;
+}
+
+.form-item input:focus,
+.form-item select:focus {
+  background: #fff;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #fff;
+  cursor: pointer;
+}
+
+.checkbox label {
+  font-size: 1rem;
+}
+
+.form-item-other {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  font-size: calc(1rem * 0.8);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2rem 0;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0;
+    padding: 2.5rem;
+  }
+}

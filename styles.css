@@ -1,0 +1,23 @@
+.card-header h1 {
+    font-size: 3.0rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.card-header h1+div {
+    font-size: calc(1rem * 1.8);
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 10px;
+    color: #ffe3e39a;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff;
+}

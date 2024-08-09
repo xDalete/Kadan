@@ -1,0 +1,125 @@
+
+.page-header {
+  display: flex;
+  align-items: center;
+  background-color: #072150; 
+  color: #fff; 
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  flex: 1; /* Para centralizar o título */
+  text-align: center; /* Centraliza o texto do título */
+}
+
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px; /* Menor padding */
+  font-size: 0.9rem; /* Tamanho menor da fonte */
+  cursor: pointer;
+  position: absolute;
+  left: 20px; /* Alinha totalmente à esquerda */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.card {
+  margin-top: 15px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #072150; 
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+.field-container {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.field-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333; 
+}
+
+.field-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9; 
+  color: #333; 
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.field-container input:focus {
+  background-color: #ffffff; 
+  border-color: #007bff; 
+}
+
+#submit-button {
+  width: 200px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submit-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    padding: 15px;
+  }
+
+  .field-container input {
+    width: 100%;
+  }
+}

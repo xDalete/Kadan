@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Orçamentos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body 
+   style="height: 100vh;">
+    <nav>
+      <div class="nav-logo">
+        <img src="./../images/logo.png" alt="logo" onclick="navigateToHome()" />
+      </div>
+      <div class="nav-links">
+        <div class="nav-link-item">
+          <a href="../clientes/index.html">Clientes</a>
+          <div class="submenu">
+            <a href="../adicionar-clientes/index.html">Adicionar Clientes</a>
+            <a href="../clientes/index.html">Ver Todos</a>
+          </div>
+        </div>
+        <div class="nav-link-item">
+          <a href="../produtos/index.html">Produtos</a>
+          <div class="submenu">
+            <a href="../adicionar-produtos/index.html">Adicionar Produtos</a>
+            <a href="../produtos/index.html">Ver Todos</a>
+          </div>
+        </div>
+        <div class="nav-link-item">
+          <a href="../orcamentos/index.html">Orçamentos</a>
+          <div class="submenu">
+            <a href="../novo-orcamento/index.html">Criar Orçamento</a>
+            <a href="../orcamentos/index.html">Ver Todos</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-user">
+        <img src="./../images/user.png" alt="user" onclick="toggleUserMenu()" />
+      </div>
+    </nav>
+
+
+    <div class="user-menu" id="userMenu">
+      <div class="user-info">
+        <img src="./../images/user.png" alt="user" />
+        <div>
+          <span>Nome do Usuário</span>
+          <span>email@exemplo.com</span>
+        </div>
+      </div>
+      <div onclick="navigateToProfile()">Perfil</div>
+      <div onclick="navigateToSettings()">Configurações</div>
+      <div onclick="logout()">Sair</div>
+    </div>
+
+    <header class="header">
+      <div class="header-title"> Orçamentos</div>
+      <div class="header-action">
+        <button class="add-button"><a href="../novo-orcamento/index.html">+</a></button>
+      </div>
+    </header>
+
+    <section class="search-section">
+      <input type="text" class="search-bar" placeholder="Pesquisar Orçamento" />
+    </section>
+
+    <section class="clients-section">
+      <div class="client-item">
+        <span class="client-code">1</span>
+        <span class="client-name">Orçamento 1</span>
+      </div>
+      <div class="client-item">
+        <span class="client-code">2</span>
+        <span class="client-name">Orçamento 2</span>
+      </div>
+      <!-- Adicione mais orçamentos aqui -->
+    </section>
+    <script src="../lib/Orcamento.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
