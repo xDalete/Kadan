@@ -40,7 +40,7 @@ function displayUserData() {
 }
 
 function navigateToHome() {
-    window.location.href = "./../paginainicial/index.html";
+    window.location.href = "/";
 }
 
 function toggleUserMenu() {
